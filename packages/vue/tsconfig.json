@@ -1,0 +1,9 @@
+{
+  "extends": "@withbeacon/tsconfig/vue-library",
+  "main": "./build/index.js",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "compilerOptions": {
+     "outDir": "./dist"
+  },
+}
+
