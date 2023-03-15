@@ -1,4 +1,4 @@
-type PageViewEvent = {
+export type PageViewEvent = {
   pathname: string;
 };
 
@@ -10,8 +10,8 @@ export type AnalyticsProps = {
 
 declare global {
   interface Window {
-    beacon: {
-      before: SendEvent;
+    beacon?: {
+      before?: SendEvent;
     };
   }
 }

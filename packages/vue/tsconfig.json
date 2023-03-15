@@ -1,9 +1,27 @@
 {
   "extends": "@withbeacon/tsconfig/vue-library",
   "main": "./build/index.js",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+    "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
   "compilerOptions": {
-     "outDir": "./dist"
+    //...
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "declaration": true,
+    "outDir": "dist",
+    "declarationDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
   },
 }
 
