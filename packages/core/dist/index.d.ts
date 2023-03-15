@@ -7,8 +7,8 @@ type AnalyticsProps = {
 };
 declare global {
     interface Window {
-        beacon: {
-            before: SendEvent;
+        beacon?: {
+            before?: SendEvent;
         };
     }
 }

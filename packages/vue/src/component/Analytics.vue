@@ -1,13 +1,15 @@
 <script lang="ts" setup>
-import type { AnalyticsProps } from "@withbeacon/core";
 import { onMounted } from "vue";
 import { useAnalytics } from "../composable/useAnalytics";
-const props = defineProps<AnalyticsProps>()
+import type { AnalyticsProps } from "@withbeacon/core";
+export interface Props {
+    props: AnalyticsProps | any;
+}
+const props = defineProps<Props>();
 onMounted(() => {
-    useAnalytics(props)
-})
+    useAnalytics(props.props);
+});
 </script>
 
 <template>
-    
 </template>
